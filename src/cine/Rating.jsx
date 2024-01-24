@@ -9,5 +9,4 @@ const Rating = ({ value }) => {
 		</div>
 	);
 };
-
 export default Rating;
