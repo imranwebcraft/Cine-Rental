@@ -4,7 +4,7 @@ import Home from "./pages/Home";
 
 function App() {
 	const [cartData, setCartData] = useState([]);
-	const [theme, setTheme] = useState("light");
+	const [theme, setTheme] = useState("dark");
 
 	const cartInfo = {
 		cartData,
