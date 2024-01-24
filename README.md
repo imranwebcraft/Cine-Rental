@@ -34,24 +34,15 @@ Visit the live site at [cine-rental.com](https://cine-rental-ruddy.vercel.app/)
 
 ## Getting Started
 
-Follow these steps to set up and run the Cine-Rental website locally:
-
-1. **Clone the Repository:**
-   ```bash
-   https://github.com/imranwebcraft/Cine-Rental
-   ```
-
-## Getting Started
-
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/imranwebcraft/book-finder-app.git
+git clone https://github.com/imranwebcraft/Cine-Rental
 ```
 
 2. Navigate to the project directory.
    ```bash
-   cd book-finder
+   cd Cine-Rental
    ```
 3. Install dependencies.
 
