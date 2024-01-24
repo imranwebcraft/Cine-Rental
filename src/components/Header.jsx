@@ -49,8 +49,8 @@ const Header = () => {
 						>
 							<img
 								src={shoppingCart}
-								width="24"
 								height="24"
+								width="24"
 								alt="shopping cart"
 							/>
 						</a>
