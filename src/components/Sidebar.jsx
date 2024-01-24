@@ -10,7 +10,7 @@ const Sidebar = () => {
 			<ul className="space-y-2">
 				<li>
 					<a
-						className="flex items-center space-x-2 px-5 py-3.5 rounded-lg bg-primary text-black"
+						className="flex items-center space-x-2 px-5 py-3.5 rounded-lg bg-primary hover:bg-primary text-black"
 						href="#"
 					>
 						<img src={trending} width="24" height="24" alt="trending" />
@@ -19,7 +19,7 @@ const Sidebar = () => {
 				</li>
 				<li>
 					<a
-						className="flex items-center space-x-2 px-5 py-3.5 rounded-lg"
+						className="flex items-center space-x-2 px-5 py-3.5 rounded-lg hover:bg-primary"
 						href="#"
 					>
 						<img src={newRelease} width="24" height="24" alt="new release" />
@@ -28,7 +28,7 @@ const Sidebar = () => {
 				</li>
 				<li>
 					<a
-						className="flex items-center space-x-2 px-5 py-3.5 rounded-lg"
+						className="flex items-center space-x-2 px-5 py-3.5 rounded-lg hover:bg-primary"
 						href="#"
 					>
 						<img src={comingSoon} width="24" height="24" alt="coming soon" />
@@ -37,7 +37,7 @@ const Sidebar = () => {
 				</li>
 				<li>
 					<a
-						className="flex items-center space-x-2 px-5 py-3.5 rounded-lg"
+						className="flex items-center space-x-2 px-5 py-3.5 rounded-lg hover:bg-primary"
 						href="#"
 					>
 						<img src={favorite} width="24" height="24" alt="favorite" />
@@ -46,7 +46,7 @@ const Sidebar = () => {
 				</li>
 				<li>
 					<a
-						className="flex items-center space-x-2 px-5 py-3.5 rounded-lg"
+						className="flex items-center space-x-2 px-5 py-3.5 rounded-lg hover:bg-primary"
 						href="#"
 					>
 						<img src={watchLater} width="24" height="24" alt="watch later" />
