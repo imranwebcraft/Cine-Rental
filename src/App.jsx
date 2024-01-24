@@ -1,13 +1,14 @@
 import { useReducer, useState } from "react";
 import MovieContext, { ThemeContext } from "./context";
 import Home from "./pages/Home";
-import cartReducer, { initialState } from "./reducers/CartReducer";
+import cartReducer, { initialData } from "./reducers/CartReducer";
 function App() {
 	const [theme, setTheme] = useState("dark");
-	const [state, dispatch] = useReducer(cartReducer, initialState);
+	const [cartData, dispatch] = useReducer(cartReducer, initialData);
+	console.log(cartData);
 
 	const cartInfo = {
-		state,
+		cartData,
 		dispatch,
 	};
 

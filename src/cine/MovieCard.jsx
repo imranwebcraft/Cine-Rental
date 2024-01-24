@@ -8,7 +8,7 @@ import Rating from "./Rating";
 const MovieCard = ({ movie }) => {
 	const [showModal, setShowModal] = useState(false);
 	const [selectedMovie, setSelectedMovie] = useState(null);
-	const { state, dispatch } = useContext(MovieContext);
+	const { cartData, dispatch } = useContext(MovieContext);
 	const { theme } = useContext(ThemeContext);
 	// Handlers
 
@@ -26,10 +26,10 @@ const MovieCard = ({ movie }) => {
 
 	const handleAddToCart = (movie, e) => {
 		e.stopPropagation();
-		const found = state.cartData.find((item) => item.id === movie.id);
+		const found = cartData.find((item) => item.id === movie.id);
 		if (found) {
 			return toast.error(`${movie.title} already added to the cart`, {
-				position: "top-right",
+				position: "bottom-right",
 				theme: `${theme === "light" ? "light" : "dark"}`,
 			});
 		} else {
@@ -38,7 +38,7 @@ const MovieCard = ({ movie }) => {
 				payload: movie,
 			});
 			toast.success(`${movie.title} added to the cart`, {
-				position: "top-right",
+				position: "bottom-right",
 				theme: `${theme === "light" ? "light" : "dark"}`,
 			});
 		}

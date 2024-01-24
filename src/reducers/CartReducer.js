@@ -1,28 +1,19 @@
 // Create a initial state
-const initialState = {
-	cartData: [],
-};
+const initialData = [];
 
 // Create reducer function and write all logic
-const cartReducer = (state, action) => {
+const cartReducer = (cartData, action) => {
 	switch (action.type) {
 		case "add_to_cart":
-			return {
-				cartData: [...state.cartData, action.payload],
-			};
+			return [...cartData, action.payload];
 
 		case "remove_from_cart":
-			return {
-				...state,
-				cartData: state.cartData.filter(
-					(item) => item.id !== action.payload.id
-				),
-			};
+			return cartData.filter((item) => item.id !== action.payload.id);
 		default: {
 			throw new Error(`Invalid action ${action.type}`);
 		}
 	}
 };
 
-export { initialState };
+export { initialData };
 export default cartReducer;

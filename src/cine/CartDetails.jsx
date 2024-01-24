@@ -6,9 +6,8 @@ import MovieContext, { ThemeContext } from "../context";
 import getImageUrl from "../utils/cine-utility";
 
 const CartDetails = ({ onClose }) => {
-	const { state, dispatch } = useContext(MovieContext);
+	const { cartData, dispatch } = useContext(MovieContext);
 	const { theme } = useContext(ThemeContext);
-
 	const handleMovieRemove = (movie) => {
 		dispatch({
 			type: "remove_from_cart",
@@ -16,7 +15,7 @@ const CartDetails = ({ onClose }) => {
 		});
 
 		toast.success(`${movie.title} removed from the cart`, {
-			position: "top-right",
+			position: "bottom-right",
 			theme: `${theme === "light" ? "light" : "dark"}`,
 		});
 	};
@@ -30,14 +29,14 @@ const CartDetails = ({ onClose }) => {
 					</h2>
 					{/* Cart Movie list */}
 					<div className="space-y-8 lg:space-y-12 max-h-[450px] overflow-auto mb-10 lg:mb-14">
-						{state.cartData.length === 0 ? (
+						{cartData.length === 0 ? (
 							<div className=" text-lg font-bold text-center">
 								No Item In The Cart
 							</div>
 						) : (
 							<>
 								{" "}
-								{state.cartData.map((item) => (
+								{cartData.map((item) => (
 									<div
 										key={item.id}
 										className="grid grid-cols-[1fr_auto] gap-4"
