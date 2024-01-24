@@ -24,19 +24,19 @@ const MovieDetailsModal = ({ movie, onClose, onAddToCart }) => {
 							{movie.description}
 						</p>
 						<div className="grid lg:grid-cols-2 gap-2">
-							<a
+							<button
 								className="bg-primary rounded-lg py-2 px-5 flex items-center justify-center gap-2 text-[#171923] font-semibold text-sm"
 								onClick={(e) => onAddToCart(movie, e)}
 							>
 								<img src="./assets/tag.svg" alt="" />
 								<span>${movie.price} | Add to Cart</span>
-							</a>
-							<a
+							</button>
+							<button
 								onClick={onClose}
 								className="border border-[#74766F] rounded-lg py-2 px-5 flex items-center justify-center gap-2 text-red-500 hover:bg-red-500 hover:text-white font-semibold hover:border-transparent duration-300 text-sm"
 							>
 								Cancel
-							</a>
+							</button>
 						</div>
 					</div>
 				</div>

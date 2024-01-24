@@ -7,7 +7,6 @@ import Rating from "./Rating";
 const MovieCard = ({ movie }) => {
 	const [showModal, setShowModal] = useState(false);
 	const [selectedMovie, setSelectedMovie] = useState(null);
-
 	const { cartData, setCartData } = useContext(MovieContext);
 	// Handlers
 
@@ -40,7 +39,7 @@ const MovieCard = ({ movie }) => {
 				<MovieDetailsModal
 					movie={selectedMovie}
 					onClose={handleModalCloseClick}
-					onAddToCart
+					onAddToCart={handleAddToCart}
 				/>
 			)}
 			<a onClick={() => handleModalOpenClick(movie)}>

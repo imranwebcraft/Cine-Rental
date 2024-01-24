@@ -22,7 +22,7 @@ const CartDetails = ({ onClose }) => {
 					{/* Cart Movie list */}
 					<div className="space-y-8 lg:space-y-12 max-h-[450px] overflow-auto mb-10 lg:mb-14">
 						{cartData.length === 0 ? (
-							<div className=" text-2xl font-bold text-center">
+							<div className=" text-lg font-bold text-center">
 								No Item In The Cart
 							</div>
 						) : (
