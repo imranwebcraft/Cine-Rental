@@ -40,10 +40,10 @@ const MovieCard = ({ movie }) => {
 				<MovieDetailsModal
 					movie={selectedMovie}
 					onClose={handleModalCloseClick}
-					onAddToCart={handleAddToCart}
+					onAddToCart
 				/>
 			)}
-			<a href="#" onClick={() => handleModalOpenClick(movie)}>
+			<a onClick={() => handleModalOpenClick(movie)}>
 				<figure className="p-4 border border-black/10 shadow-sm dark:border-white/10 rounded-xl">
 					<img
 						className="w-full object-cover"
@@ -59,7 +59,6 @@ const MovieCard = ({ movie }) => {
 						<button
 							onClick={(e) => handleAddToCart(movie, e)}
 							className="bg-primary hover:bg-green-600 duration-300 rounded-lg py-2 px-5 flex items-center justify-center gap-2 text-[#000] font-semibold text-sm"
-							href="#"
 						>
 							<img src="./assets/tag.svg" alt="" />
 							<span>${movie.price} | Add to Cart</span>

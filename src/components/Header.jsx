@@ -28,26 +28,19 @@ const Header = () => {
 
 				<ul className="flex items-center space-x-5">
 					<li>
-						<a
-							className="bg-primary/20 dark:bg-primary/[7%] rounded-lg backdrop-blur-[2px] p-1 inline-block"
-							href="#"
-						>
+						<a className="bg-primary/20 dark:bg-primary/[7%] rounded-lg backdrop-blur-[2px] p-1 inline-block">
 							<img src={ring} width="24" height="24" alt="" />
 						</a>
 					</li>
 					<li>
-						<a
-							className="bg-primary/20 dark:bg-primary/[7%] rounded-lg backdrop-blur-[2px] p-1 inline-block"
-							href="#"
-						>
+						<a className="bg-primary/20 dark:bg-primary/[7%] rounded-lg backdrop-blur-[2px] p-1 inline-block">
 							<img src={moon} width="24" height="24" alt="" />
 						</a>
 					</li>
 					<li>
-						<a
+						<button
 							onClick={handleShowCart}
 							className="bg-primary/20 dark:bg-primary/[7%] rounded-lg backdrop-blur-[2px] p-1 inline-block"
-							href="#"
 						>
 							<img
 								src={shoppingCart}
@@ -60,7 +53,7 @@ const Header = () => {
 									{cartData.length}
 								</span>
 							)}
-						</a>
+						</button>
 					</li>
 				</ul>
 			</nav>
