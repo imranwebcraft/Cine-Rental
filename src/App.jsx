@@ -2,7 +2,6 @@ import { useReducer, useState } from "react";
 import MovieContext, { ThemeContext } from "./context";
 import Home from "./pages/Home";
 import cartReducer, { initialState } from "./reducers/CartReducer";
-
 function App() {
 	const [theme, setTheme] = useState("dark");
 	const [state, dispatch] = useReducer(cartReducer, initialState);

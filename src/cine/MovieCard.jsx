@@ -1,5 +1,6 @@
 import { useContext, useState } from "react";
-import MovieContext from "../context";
+import { toast } from "react-toastify";
+import MovieContext, { ThemeContext } from "../context";
 import getImageUrl from "../utils/cine-utility";
 import MovieDetailsModal from "./MovieDetailsModal";
 import Rating from "./Rating";
@@ -8,6 +9,7 @@ const MovieCard = ({ movie }) => {
 	const [showModal, setShowModal] = useState(false);
 	const [selectedMovie, setSelectedMovie] = useState(null);
 	const { state, dispatch } = useContext(MovieContext);
+	const { theme } = useContext(ThemeContext);
 	// Handlers
 
 	// Modal open event handler
@@ -26,11 +28,18 @@ const MovieCard = ({ movie }) => {
 		e.stopPropagation();
 		const found = state.cartData.find((item) => item.id === movie.id);
 		if (found) {
-			return console.error("Already added to cart");
+			return toast.error(`${movie.title} already added to the cart`, {
+				position: "top-right",
+				theme: `${theme === "light" ? "light" : "dark"}`,
+			});
 		} else {
 			dispatch({
 				type: "add_to_cart",
 				payload: movie,
+			});
+			toast.success(`${movie.title} added to the cart`, {
+				position: "top-right",
+				theme: `${theme === "light" ? "light" : "dark"}`,
 			});
 		}
 	};
