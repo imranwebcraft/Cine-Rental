@@ -9,7 +9,7 @@ import MovieContext, { ThemeContext } from "../context";
 
 const Header = () => {
 	const [showCart, setShowCart] = useState(false);
-	const { cartData } = useContext(MovieContext);
+	const { state } = useContext(MovieContext);
 	const { theme, setTheme } = useContext(ThemeContext);
 
 	const handleShowCart = () => {
@@ -57,9 +57,9 @@ const Header = () => {
 								width="24"
 								alt="shopping cart"
 							/>
-							{cartData.length > 0 && (
+							{state.cartData.length > 0 && (
 								<span className=" rounded-full absolute top-[-55%] -left-[-90%] bg-primary text-white p-1 w-[30px] h-[30px] flex justify-center items-center">
-									{cartData.length}
+									{state.cartData.length}
 								</span>
 							)}
 						</button>

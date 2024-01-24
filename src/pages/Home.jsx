@@ -7,8 +7,6 @@ import { ThemeContext } from "../context";
 
 const Home = () => {
 	const { theme } = useContext(ThemeContext);
-	console.log(theme);
-
 	return (
 		<div className={` w-full h-full ${theme === "light" ? "" : "dark"}`}>
 			<Header />

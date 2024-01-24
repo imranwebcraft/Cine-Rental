@@ -1,14 +1,15 @@
-import { useState } from "react";
+import { useReducer, useState } from "react";
 import MovieContext, { ThemeContext } from "./context";
 import Home from "./pages/Home";
+import cartReducer, { initialState } from "./reducers/CartReducer";
 
 function App() {
-	const [cartData, setCartData] = useState([]);
 	const [theme, setTheme] = useState("dark");
+	const [state, dispatch] = useReducer(cartReducer, initialState);
 
 	const cartInfo = {
-		cartData,
-		setCartData,
+		state,
+		dispatch,
 	};
 
 	const themeInfo = {
