@@ -40,6 +40,7 @@ const MovieCard = ({ movie }) => {
 				<MovieDetailsModal
 					movie={selectedMovie}
 					onClose={handleModalCloseClick}
+					onAddToCart={handleAddToCart}
 				/>
 			)}
 			<a href="#" onClick={() => handleModalOpenClick(movie)}>

@@ -9,7 +9,6 @@ import MovieContext from "../context";
 const Header = () => {
 	const [showCart, setShowCart] = useState(false);
 	const { cartData } = useContext(MovieContext);
-	console.log(cartData);
 
 	const handleShowCart = () => {
 		setShowCart(true);
