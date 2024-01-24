@@ -21,6 +21,11 @@ const MovieCard = ({ movie }) => {
 		setShowModal(false);
 	};
 
+	const handleAddToCart = (movie, e) => {
+		e.stopPropagation();
+		console.log(movie);
+	};
+
 	return (
 		<>
 			{/* Show details modal conditionally */}
@@ -43,13 +48,14 @@ const MovieCard = ({ movie }) => {
 						{/* Rating */}
 						<Rating value={movie.rating} />
 
-						<a
+						<button
+							onClick={(e) => handleAddToCart(movie, e)}
 							className="bg-primary hover:bg-green-600 duration-300 rounded-lg py-2 px-5 flex items-center justify-center gap-2 text-[#000] font-semibold text-sm"
 							href="#"
 						>
 							<img src="./assets/tag.svg" alt="" />
 							<span>${movie.price} | Add to Cart</span>
-						</a>
+						</button>
 					</figcaption>
 				</figure>
 			</a>
