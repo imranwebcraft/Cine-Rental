@@ -8,9 +8,14 @@ import MovieContext from "./context";
 function App() {
 	const [cartData, setCartData] = useState([]);
 
+	const cartInfo = {
+		cartData,
+		setCartData,
+	};
+
 	return (
 		<>
-			<MovieContext.Provider value={{ cartData, setCartData }}>
+			<MovieContext.Provider value={cartInfo}>
 				<Header />
 				<main>
 					<div className="container grid lg:grid-cols-[218px_1fr] gap-[3.5rem]">
